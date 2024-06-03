@@ -39,7 +39,7 @@ const usuario = mongoose.model('Usuario', usuarioSchema);
 
 //VERBOS PARA PRODUCTOS
 // Operación para obtener todos los productos
-app.get('/productos', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const productos = await Producto.find();
         res.json(productos);
@@ -75,7 +75,7 @@ app.delete('/productos/:id', async (req, res) => {
 
 //VERBOS PARA USUARIOS
 // Operación para obtener todos los usuarios
-app.get('/usuario', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const usuario = await usuario.find();
         res.json(usuario);
